@@ -16,6 +16,6 @@ public interface SecurityConstants {
     long EXPIRATION_DATE = 864_000_000;
     String TOKEN_PREFIX = "Bearer ";
     String HEADER_STRING = "Authorization";
-    String SING_UP_URL = "/user/signup";
-    String LOGIN_URL = "/login";
+    String SING_UP_URL = "/api/user/signup";
+    String LOGIN_URL = "/api/login";
 }

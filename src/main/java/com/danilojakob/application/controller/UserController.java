@@ -2,6 +2,7 @@ package com.danilojakob.application.controller;
 
 import com.danilojakob.application.domain.User;
 import com.danilojakob.application.dtos.SignUpDto;
+import com.danilojakob.application.security.SecurityConstants;
 import com.danilojakob.application.service.RoleService;
 import com.danilojakob.application.service.UserService;
 import com.danilojakob.application.validator.SignUpValidator;
@@ -20,7 +21,6 @@ import java.util.ArrayList;
  * @copyright Danilo Jakob
  */
 @RestController
-@RequestMapping("/user")
 @RequiredArgsConstructor
 public class UserController {
 
@@ -39,7 +39,7 @@ public class UserController {
      * @param user {@link User} user to create
      * @return {@link ResponseEntity} with Status Code
      */
-    @PostMapping(value = "/signup")
+    @PostMapping(value = SecurityConstants.SING_UP_URL)
     public ResponseEntity signUp(@Validated @RequestBody SignUpDto signUpDto) {
 
         if(signUpDto.getRoles() == null){
