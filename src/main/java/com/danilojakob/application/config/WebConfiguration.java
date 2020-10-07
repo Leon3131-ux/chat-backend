@@ -16,15 +16,17 @@ public class WebConfiguration implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins("*")
                 .allowedMethods("*")
+                .allowedHeaders("*")
                 .exposedHeaders(
-                        "Access-Control-Allow-Headers",
-                        "Access-Control-Allow-Origin",
-                        "Access-Control-Expose-Headers",
-                        "Authorization",
-                        "Cache-Control",
-                        "Content-Type",
-                        "Origin"
-                );
+                "Access-Control-Allow-Headers",
+                "Access-Control-Allow-Origin",
+                "Access-Control-Expose-Headers",
+                "Authorization",
+                "Cache-Control",
+                "Content-Type",
+                "Origin"
+                )
+                .allowCredentials(true);
     }
 
 }

@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.danilojakob</groupId>
-    <artifactId>application</artifactId>
+    <artifactId>chat-backend</artifactId>
     <version>1.0.0</version>
-    <name>Spring Boilerplate</name>
+    <name>chat backend</name>
     <description>Spring Boilerplate Code with Role Based JWT Authentication</description>
 
     <properties>
@@ -88,12 +88,6 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
